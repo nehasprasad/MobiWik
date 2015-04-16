@@ -9,18 +9,21 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.Toast;
 
 
 public class MainActivity extends ActionBarActivity {
 
     private RadioGroup radioGroup;
     private RadioButton price1, price2, price3, price4;
+    public  String str;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        final RadioGroup rg = (RadioGroup) findViewById(R.id.radiogroup_layout);
+
+
         Button button1 = (Button) findViewById(R.id.button1);
 
         price1 = (RadioButton) findViewById(R.id.price1);
@@ -32,8 +35,7 @@ public class MainActivity extends ActionBarActivity {
             @Override
             public void onClick(View arg0) {
                 // TODO Auto-generated method stub
-                final Intent intent = new Intent(getApplicationContext(),RAM.class);
-                startActivity(intent);
+
                 radioGroup = (RadioGroup) findViewById(R.id.radiogroup_layout);
                 radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
 
@@ -41,33 +43,35 @@ public class MainActivity extends ActionBarActivity {
                     public void onCheckedChanged(RadioGroup group, int checkedId) {
                         // find which radio button is selected
                         if (checkedId == R.id.price1) {
-                            Toast.makeText(getApplicationContext(), "choice: Silent",
-                                    Toast.LENGTH_SHORT).show();
-                            Intent intent1 = new Intent(MainActivity.this,RAM.class);
-                            intent1.putExtra("Price","10000");
-                            startActivity(intent);
+
+                            str = "10000";
+
                         } else if (checkedId == R.id.price2) {
-                            Toast.makeText(getApplicationContext(), "choice: Sound",
-                                    Toast.LENGTH_SHORT).show();
+
+                            str = "20000";
+
                         } else if (checkedId == R.id.price3) {
-                            Toast.makeText(getApplicationContext(), "choice: Sound",
-                                    Toast.LENGTH_SHORT).show();
+                            str = "30000";
                         } else {
-                            Toast.makeText(getApplicationContext(), "choice: Vibration",
-                                    Toast.LENGTH_SHORT).show();
+                            str = "75000";
                         }
                     }
 
                 });
+                final String selectedRadioValue = ((RadioButton)findViewById(rg.getCheckedRadioButtonId() )).getText().toString();
+                Intent intent = new Intent(getApplicationContext(), RAM.class);
+                intent.putExtra("Price", selectedRadioValue);
+
+                startActivity(intent);
+
+                }
+
+            });
 
 
-
-
-            }
-
-        });
 
     }
+
 
 
 

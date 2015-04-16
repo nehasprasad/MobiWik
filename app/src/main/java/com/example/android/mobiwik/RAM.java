@@ -8,6 +8,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 
@@ -22,9 +24,9 @@ public class RAM extends ActionBarActivity {
 
 
         Intent intent = getIntent();
-        String price = intent.getStringExtra("Price");
-        Log.d(TAG, price);
-        Toast.makeText(getApplicationContext(), price, Toast.LENGTH_LONG).show();
+        String subject = intent.getStringExtra("Price");
+        Log.d(TAG, subject);
+        Toast.makeText(getApplicationContext(), subject, Toast.LENGTH_LONG).show();
 
         button1.setOnClickListener(new View.OnClickListener() {
 

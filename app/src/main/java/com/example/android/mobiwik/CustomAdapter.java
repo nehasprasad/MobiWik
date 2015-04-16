@@ -64,10 +64,10 @@ public class CustomAdapter extends BaseAdapter{
         if (view == null) {
             LayoutInflater li = (LayoutInflater)activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             v = li.inflate(R.layout.list_item_layout,null);
-            holder.name = (TextView)v.findViewById(R.id.name);
-            holder.usn = (TextView)v.findViewById(R.id.usn);
-            holder.semester = (TextView)v.findViewById(R.id.semester);
-            holder.camera=(TextView)v.findViewById(R.id.camera);
+            holder.name = (TextView)v.findViewById(R.id.product_name);
+            holder.usn = (TextView)v.findViewById(R.id.product_brand);
+            holder.semester = (TextView)v.findViewById(R.id.product_camera);
+            holder.camera=(TextView)v.findViewById(R.id.product_price);
             holder.imageView = (ParseImageView)v.findViewById(R.id.imageView);
 
             /*holder.memory=(TextView)v.findViewById(R.id.memory);
