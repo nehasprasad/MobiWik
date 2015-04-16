@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">MobiWik</string>
+
+    <string name="price">1.Whats the price range of the phone?</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_splash">Splash</string>
+    <string name="title_activity_ram">RAM</string>
+    <string name="ram">2.How much RAM capacity do you expect?</string>
+    <string name="title_activity_weight">Weight</string>
+    <string name="wee">3.Whats the preferred weight of the phone?</string>
+    <string name="title_activity_memory">Memory</string>
+    <string name="mem">4.Whats the internal memory of the phone you expect?</string>
+    <string name="cam">5.Whats the requirement regarding the camera of the phone</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_camera">Camera</string>
+    <string name="title_activity_detail">DetailActivity</string>
+    <string name="title_activity_display">DisplayActivity</string>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_disp">DispActivity</string>
+</resources>

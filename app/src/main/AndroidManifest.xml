@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.android.mobiwik" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:name=".MobiWik"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".Splash"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:parentActivityName=".Splash" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.android.mobiwik.MainActivity" />
+        </activity>
+        <activity
+            android:name=".RAM"
+            android:label="@string/title_activity_ram"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.android.mobiwik.MainActivity" />
+        </activity>
+        <activity
+            android:name=".Weight"
+            android:label="@string/title_activity_weight"
+            android:parentActivityName=".RAM" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.android.mobiwik.RAM" />
+        </activity>
+        <activity
+            android:name=".Memory"
+            android:label="@string/title_activity_memory"
+            android:parentActivityName=".Weight" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.android.mobiwik.Weight" />
+        </activity>
+        <activity
+            android:name=".Camera"
+            android:label="@string/title_activity_camera"
+            android:parentActivityName=".Memory" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.android.mobiwik.Memory" />
+        </activity>
+
+
+        <activity
+            android:name=".DetailActivity"
+            android:label="@string/title_activity_detail"
+            android:parentActivityName=".Camera" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.android.mobiwik.Camera" />
+        </activity>
+
+    </application>
+
+</manifest>
